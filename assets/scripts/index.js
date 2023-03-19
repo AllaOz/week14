@@ -1,3 +1,6 @@
+const filmmakerList = document.getElementById("filmmakers__list");
+const topFilmsListElem = document.getElementById("topfilmslist");
+
 let filmMakers = [
   {
     name: 'Стивен Спилберг',
@@ -42,8 +45,6 @@ let filmMakers = [
     top_rated_film: 'Далласский клуб покупателей'
   },
 ];
-const filmmakerList = document.getElementById("filmmakers__list");
-const topFilmsListElem = document.getElementById("topfilmslist");
 
     filmMakers.forEach(function(filmMaker) {
       const listItemName = document.createElement("li");
@@ -63,6 +64,7 @@ listItemLink.appendChild(document.createTextNode('Фильмография'));
       listItemCareer.style.marginBottom = "20px";
       listItemLink.style.float = "right";
     });
+    
 const topFilmsList = filmMakers.map(function(filmMaker) {
   return filmMaker.top_rated_film;
 });
