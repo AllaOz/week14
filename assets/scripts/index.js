@@ -64,11 +64,52 @@ listItemLink.appendChild(document.createTextNode('Фильмография'));
       listItemCareer.style.marginBottom = "20px";
       listItemLink.style.float = "right";
     });
-    
+
 const topFilmsList = filmMakers.map(function(filmMaker) {
   return filmMaker.top_rated_film;
 });
 topFilmsListElem.textContent = topFilmsList.join(', ');
+
+//задание со звездочкой //
+
+const arr1 = [1, 2];
+const arr2 = [2, 3];
+const arr3 = ['a', 'b'];
+const arr4 = ['b', 'c'];
+const arr5 = ['b', 'e', 'c'];
+const arr6 = ['b', 'b', 'e'];
+const arr7 = ['b', 'c', 'e'];
+const arr8 = ['b', 'e', 'c'];
+
+function intersection1 (arr1, arr2) {
+	return arr1.filter(function (item) {
+		return arr2.includes(item);
+	});
+}
+let overlap1 = intersection1(arr1, arr2);
+console.log(overlap1);
+
+function intersection2 (arr3, arr4, arr5) {
+	return arr3.filter(function (item) {
+		return arr4.includes(item);
+    return arr5.includes(item);
+   
+	});
+}
+  let overlap2 = intersection2(arr3, arr4,arr5)
+  console.log(overlap2);
+
+function intersection3(arr6, arr7, arr8) {
+	return arr6.filter(function (item) {
+		return arr7.includes(item);
+    return arr8.includes(item);  
+	});
+}
+  let overlap3 = intersection3(arr6, arr7,arr8)
+  console.log(overlap3);
+
+
+
 
 
 
