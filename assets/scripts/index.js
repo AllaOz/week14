@@ -65,10 +65,9 @@ listItemLink.appendChild(document.createTextNode('Фильмография'));
       listItemLink.style.float = "right";
     });
 
-const topFilmsList = filmMakers.map(function(filmMaker) {
-  return filmMaker.top_rated_film;
-});
-topFilmsListElem.textContent = topFilmsList.join(', ');
+const topFilmsList = filmMakers.map(filmMakers => filmMakers.top_rated_film
+);
+topFilmsListElem.textContent = topFilmsList.join(", ");
 
 //задание со звездочкой //
 
@@ -81,34 +80,38 @@ const arr6 = ['b', 'b', 'e'];
 const arr7 = ['b', 'c', 'e'];
 const arr8 = ['b', 'e', 'c'];
 
-function intersection1 (arr1, arr2) {
-	return arr1.filter(function (item) {
-		return arr2.includes(item);
-	});
-}
-let overlap1 = intersection1(arr1, arr2);
-console.log(overlap1);
+// function intersection1 (arr1, arr2) {
+// 	return arr1.filter(function (item) {
+// 		return arr2.includes(item);
+// 	});
+// }
+// let overlap1 = intersection1(arr1, arr2);
+// console.log(overlap1);
 
-function intersection2 (arr3, arr4, arr5) {
-	return arr3.filter(function (item) {
-		return arr4.includes(item);
-    return arr5.includes(item);
+// function intersection2 (arr3, arr4, arr5) {
+// 	return arr3.filter(function (item) {
+// 		return arr4.includes(item);
+//     return arr5.includes(item);
    
-	});
-}
-  let overlap2 = intersection2(arr3, arr4,arr5)
-  console.log(overlap2);
+// 	});
+// }
+//   let overlap2 = intersection2(arr3, arr4,arr5)
+//   console.log(overlap2);
 
-function intersection3(arr6, arr7, arr8) {
-	return arr6.filter(function (item) {
-		return arr7.includes(item);
-    return arr8.includes(item);  
-	});
-}
-  let overlap3 = intersection3(arr6, arr7,arr8)
-  console.log(overlap3);
+// function intersection3(arr6, arr7, arr8) {
+// 	return arr6.filter(function (item) {
+// 		return arr7.includes(item);
+//     return arr8.includes(item);  
+// 	});
+// }
+//   let overlap3 = intersection3(arr6, arr7,arr8)
+//   console.log(overlap3);
 
+const intersection = (...array) => [...new Set(array.reduce((a, b) => a.filter(v => b.includes(v))))];
 
+console.log(intersection(arr1, arr2)) 
+console.log(intersection(arr3, arr4, arr5)) 
+console.log(intersection(arr6, arr7, arr8)) 
 
 
 
