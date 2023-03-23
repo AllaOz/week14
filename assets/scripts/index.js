@@ -69,7 +69,7 @@ const topFilmsList = filmMakers.map(filmMakers => filmMakers.top_rated_film
 );
 topFilmsListElem.textContent = topFilmsList.join(", ");
 
-//задание со звездочкой //
+//задание со звездочкой (умные люди подсказали, как в одну строку решить//
 
 const arr1 = [1, 2];
 const arr2 = [2, 3];
